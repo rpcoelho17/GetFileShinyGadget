@@ -28,15 +28,16 @@ GetFile<-function(){
     server <- function(input, output) {
         observeEvent(input$done,{ 
             switch(input$IntoType,
-                   "path"={Temp <- input$FilePath$datapath},
-                   "RdataFrame"={Temp <- import(input$FilePath$datapath)},
-                   "DataTable"={Temp <- fread(input$FilePath$datapath)},
-                   "arrow" ={Temp<-read_csv_arrow(input$FilePath$datapath)}
+                   "path"={Temp <- try(input$FilePath$datapath)
+                           print(Temp)},
+                   "RdataFrame"={Temp <- try(import(input$FilePath$datapath))},
+                   "DataTable"={Temp <- try(fread(input$FilePath$datapath))},
+                   "arrow" ={Temp<-try(read_csv_arrow(input$FilePath$datapath))}
             )
-            stopApp(Temp)
+            try(stopApp(Temp))
         })
         observeEvent(input$cancel,{
-            stopApp()
+            try(stopApp())
             #stopApp(stop("No file name provided.", call. = FALSE))
         })
     }
