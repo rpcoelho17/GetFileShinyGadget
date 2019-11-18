@@ -10,5 +10,5 @@ DataFrameName <- GetFile()
 
 The GetFile function already returns an R dataframe, so load it directly into the variable name you'd like to use.
 
-Future versions will support importing into data.table and Apache arrow. 
+NOTE: When uploading large files, although the progress bar prints the message "file uploaded" pretty quickly, wait for the bar to stop blinking. If you press 'done' before the bar stops twirling you will get an error for trying to load the file into your variable before it is completely loaded into R.
 
