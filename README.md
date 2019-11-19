@@ -16,4 +16,5 @@ NOTE: When uploading large files, although the progress bar prints the message "
 
 ## Installation:
 You can install the addin by downloading the FileDialogs_0.1.0.tar.gz file and typing the following command substituting "D:/FILES/Code/R/GetFile" with the path of your file:
+
 install.packages("D:/FILES/Code/R/GetFile/FileDialogs_0.1.0.tar.gz", repos = NULL, type = "source")
