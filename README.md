@@ -14,3 +14,6 @@ Choose in the dialog whether to load into R data frame, data.table or Arrow.
 
 NOTE: When uploading large files, although the progress bar prints the message "file uploaded" pretty quickly, wait for the bar to stop blinking. If you press 'done' before the bar stops twirling you will get an error for trying to load the file into your variable before it is completely loaded into R.
 
+## Installation:
+You can install the addin by downloading the FileDialogs_0.1.0.tar.gz file and typing the following command substituting "D:/FILES/Code/R/GetFile" with the path of your file:
+install.packages("D:/FILES/Code/R/GetFile/FileDialogs_0.1.0.tar.gz", repos = NULL, type = "source")
