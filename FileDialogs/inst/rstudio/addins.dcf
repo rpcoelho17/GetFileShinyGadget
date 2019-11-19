@@ -1,0 +1,4 @@
+Name: Get File
+Description: Opens dialog box to import file.
+Binding: GetFile
+Interactive: true
