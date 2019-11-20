@@ -5,7 +5,7 @@ Ever hated typing those long file path names when loading a data set? This app s
 
 The gadget uses the "import" function from the rio package so it can load *.csv, *.xls, *.rds (R serialized), *.sav (SPSS), *.mat, *.feather, *.dbf, *.csv.gz, *.fst and all of these other formats: https://www.rdocumentation.org/packages/rio/versions/0.5.16.
 
-Supports reding into R data frame, data.table and Apache Arrow.
+Supports reading into R data frame, data.table and Apache Arrow.
 
 ## Usage:
 DataFrameName <- GetFile()
