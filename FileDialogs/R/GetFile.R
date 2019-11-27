@@ -24,7 +24,7 @@ GetFile<-function(){
     )
 
     # Define server logic required to draw a histogram
-    server <- function(input, output) {
+    server <- function(input, output, session) {
         observeEvent(input$done,{
             switch(input$IntoType,
                    "path"={Temp <- try(input$FilePath$datapath)},
@@ -38,10 +38,14 @@ GetFile<-function(){
             try(stopApp())
             #stopApp(stop("No file name provided.", call. = FALSE))
         })
+
+        session$onSessionEnded(function() {
+            stopApp()
+        })
     }
 
     # Run the application
-    runGadget(ui, server, viewer = dialogViewer("Get File Import", height = 110))
+    try(runGadget(ui, server, viewer = dialogViewer("Get File Import", height = 110)))
 }
 
 #DFName<-GetFile()
