@@ -1,11 +1,19 @@
 Package: FileDialogs
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Opens a data frame using the OS File Dialog.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Rodrigo Pinto Coelho
+Maintainer: Rodrigo Pinto Coelho <rodrigopcoelho@hotmail.com>
+Description: The GetFile function from the package FileDialogs opens
+    an OS File Dilalog to let you choose a file of several different
+    formats to be imported into a dataframe, data.table or arrow table.
+License: MIT
 Encoding: UTF-8
 LazyData: true
+Depends:
+  shiny (>= 0.13),
+  miniUI (>= 0.1.1),
+  rstudioapi (>= 0.5),
+  rio (>= 0.5.16),
+  data.table (>= 1.12.6),
+  arrow (>= 0.15.1.1)
