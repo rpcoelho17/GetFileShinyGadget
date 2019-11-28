@@ -18,3 +18,5 @@ NOTE: When uploading large files, although the progress bar prints the message "
 You can install the addin by downloading the FileDialogs_0.1.0.tar.gz file and typing the following command substituting "D:/FILES/Code/R/GetFile" with the path of your file:
 
 install.packages("D:/FILES/Code/R/GetFile/FileDialogs_0.1.0.tar.gz", repos = NULL, type = "source")
+
+The FileDialogs directory has the tar file that installs the GetFile function as an addin, and the GetFilePkg has the files to install it as a library. 
