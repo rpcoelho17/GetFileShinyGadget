@@ -3,7 +3,7 @@
 # library(rio)
 # library(data.table)
 # library(arrow)
-options(shiny.maxRequestSize = 15000*1024^2)
+options(shiny.maxRequestSize = 150000*1024^2)
 #' Loads a data frame using the OS File Dialog
 #'
 #' Lets you pick a file in your computer using the File Dialog box and loads it as a data frame, data table, or arrow frame.
