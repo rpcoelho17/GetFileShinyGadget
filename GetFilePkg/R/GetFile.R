@@ -41,7 +41,8 @@ GetFile<-function(){
                          c("Just return the file path" = "path",
                            "R Data Frame" = "RdataFrame",
                            "Data.Table (only .csv)" = "DataTable",
-                           "Arrow (only .csv)" = "arrow"))
+                           "Arrow (.csv)" = "arrow",
+                           "Arrow (.parquet)" = "arrowpq"))
         )
 
     )
@@ -53,7 +54,8 @@ GetFile<-function(){
                    "path"={Temp <- try(input$FilePath$datapath)},
                    "RdataFrame"={Temp <- try(import(input$FilePath$datapath))},
                    "DataTable"={Temp <- try(fread(input$FilePath$datapath))},
-                   "arrow" ={Temp<-try(read_csv_arrow(input$FilePath$datapath))}
+                   "arrow" ={Temp<-try(read_csv_arrow(input$FilePath$datapath))},
+                   "arrowpq" ={Temp<-try(read_parquet(input$FilePath$datapath))}
             )
             try(stopApp(Temp))
         })
@@ -68,7 +70,7 @@ GetFile<-function(){
     }
 
     # Run the application
-    try(runGadget(ui, server, viewer = dialogViewer("Get File Import", height = 110)))
+    try(runGadget(ui, server, viewer = dialogViewer("Get File Import", height = 350)))
 }
 
 #DFName<-GetFile()
