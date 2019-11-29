@@ -3,7 +3,7 @@
 # library(rio)
 # library(data.table)
 # library(arrow)
-options(shiny.maxRequestSize = 15000*1024^2)
+options(shiny.maxRequestSize = 150000*1024^2)
 
 #' @export
 GetFile<-function(){
